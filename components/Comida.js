@@ -8,6 +8,9 @@ export default (props)=>{
   const calcula = (preco)=>{
     setNumero(numero + preco)
   }
+  const zerar = ()=>{
+    setNumero(numero == 0)
+  }
 
   return(
   <Fragment>
@@ -27,6 +30,8 @@ export default (props)=>{
       <Button title="Comprar" onPress={() =>calcula(4)}/>
       <Text style={Estilo.texto}>Água com gás</Text>
       <Button title="Comprar" onPress={() =>calcula(2)}/>
+      <Text style={Estilo.textoDestaque}>Cancelar Pedido</Text>
+      <Button title="Cancelar" onPress={() =>zerar(0)}/>
       <Text style={Estilo.textoDestaque}>Valor Total: R$ {numero}</Text>
   </Fragment>
   ); 
